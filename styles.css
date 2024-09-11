@@ -1,0 +1,257 @@
+:root {
+  --background-color: #000e0c;
+  --text-color: #e1e1e1;
+  --primary-color: #81fefe;
+  --secondary-color: #888888;
+  --tag-color: #171f1f;
+  --font-family: "Prompt", sans-serif;
+  --itens-background: #171d1d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  gap: 27px;
+  padding: 10px 0;
+}
+
+/*aside*/
+
+aside {
+  background: var(--itens-background);
+  border-radius: 10px;
+  padding: 2.5em 1em;
+  text-align: center;
+}
+
+.ancora-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ancora-lista__item {
+  list-style: none;
+}
+
+.ancora {
+  text-decoration: none;
+  display: flex;
+  padding: 8px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--secondary-color);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.ancora-destaque {
+  padding: 12px 30px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/*main*/
+main {
+  background: var(--itens-background);
+  border-radius: 8px;
+
+  display: flex;
+  padding: 32px;
+  gap: 40px;
+}
+
+.container-img {
+  height: 368px;
+  background: var(--secondary-color);
+  border-radius: 8px;
+  padding: 24px 16px;
+}
+
+.main-img {
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-upload-img button {
+  margin: 16px 0 8px 0;
+  padding: 12px;
+  width: 100%;
+
+  border-radius: 8px;
+  border: 1px solid var(--secondary-color);
+  background: var(--itens-background);
+  color: var(--secondary-color);
+
+  font-size: 16px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  position: relative;
+}
+
+.container-upload-img button::after {
+  content: "";
+  background-image: url(./img/upload.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+.container-img-nome {
+  display: flex;
+  gap: 8px;
+  color: var(--secondary-color);
+  font-size: 15px;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+form div label {
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 8px;
+}
+
+form div input,
+textarea {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 4px;
+
+  width: 100%;
+  padding: 8px 16px;
+
+  font-family: var(--font-family);
+  line-height: 22.5px;
+}
+
+form div input {
+  height: 39px;
+}
+
+textarea {
+  height: 196px;
+}
+
+.lista-tags {
+  display: flex;
+  gap: 16px;
+}
+
+.lista-tags li {
+  background: var(--secondary-color);
+  color: var(--background-color);
+  border-radius: 4px;
+
+  display: flex;
+  gap: 10px;
+  padding: 4px 8px;
+}
+
+.container-btns {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.container-btns button {
+  width: 50%;
+  padding: 12px 32px 12px 12px;
+  text-align: center;
+  border-radius: 8px;
+
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-descartar {
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  background: var(--itens-background);
+  color: var(--primary-color);
+  position: relative;
+}
+
+.btn-descartar::after {
+  content: "";
+  background-image: url(./img/trash.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+.btn-publicar {
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--background-color);
+  position: relative;
+}
+
+.btn-publicar::after {
+  content: "";
+  background-image: url(./img/arrow_forward2.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+.container-descricao {
+  width: 422px;
+}
